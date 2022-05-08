@@ -9,12 +9,12 @@ public class HW10 {
     public static String deleteSpaces(String str) {
         String str2 = " ";
 
-        if (str.length() != 0) {
-            str2 = str.replace(" ", "");
+        if (str.isEmpty() == false) {
+            str2 = str.trim();
 
             if (str.length() != str2.length()) {
 
-                return "Extra spaces removed";
+                return "Extra spaces were removed";
             } else if (str.length() == str2.length()) {
 
                 return "There were no spaces";
@@ -28,12 +28,10 @@ public class HW10 {
 
         line();
         task();
-        System.out.println(deleteSpaces("   QA4Everyone"));
-        System.out.println(deleteSpaces("QA4Everyone"));
-        System.out.println(deleteSpaces(""));
 
-        line();
-        task();
+        System.out.println((deleteSpaces("   QA4Everyone")));
+        System.out.println((deleteSpaces("QA4Everyone")));
+        System.out.println((deleteSpaces("")));
 
     }
 }

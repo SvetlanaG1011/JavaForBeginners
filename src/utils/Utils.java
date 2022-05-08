@@ -9,17 +9,15 @@ public class Utils {
     public static String actualResultDouble = " ";
 
 
-    public static void printLine(){
+    public static void printLine() {
         System.out.println("_________________________________________");
 
     }
-
 
     public static void task() {
         System.out.println("             Task " + num);
         num++;
     }
-
 
     public static void line() {
         System.out.println("\u2665" + "=====================================" + "\u2665");
@@ -51,41 +49,30 @@ public class Utils {
         return actualResultDouble;
     }
 
-        public static int arrayLength(int a, int b){
+    public static int arrayLength(int a, int b) {
         int count = 0;
-        for (int i = a; i <= b; i++){
+        for (int i = a; i <= b; i++) {
             count++;
         }
         return count;
     }
 
-    //public static void printArray(int[] array){
-    //    System.out.println(array[]);
-    //}
-
-
-    public static double formatDouble1(double number, int d){
+    public static double formatDouble1(double number, int d) {
         int num = (int) Math.round(number * Math.pow(10, d));
         number = num / Math.pow(10, d);
         return number;
     }
 
-        public static void printArray(int[] array){
-            System.out.println(Arrays.toString(array));
-        }
-
-        public static void printArray(double[] array){
-            System.out.println(Arrays.toString(array));
-        }
-
-        public static void printArray(String[] array){
+    public static void printArray(int[] array) {
         System.out.println(Arrays.toString(array));
-        }
+    }
 
+    public static void printArray(double[] array) {
+        System.out.println(Arrays.toString(array));
+    }
 
-
-
-
-
+    public static void printArray(String[] array) {
+        System.out.println(Arrays.toString(array));
+    }
 
 }
