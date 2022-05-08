@@ -24,6 +24,17 @@ public class HW10 {
         return "String is empty";
     }
 
+    public static String RemoveAllaAlgorithm(String str){
+
+        if (str.length() != 0 ){
+           str = str.replace("a", "");
+
+          return str;
+        }
+
+        return " ";
+    }
+
     public static void main(String[] args) {
 
         line();
@@ -33,5 +44,11 @@ public class HW10 {
         System.out.println((deleteSpaces("QA4Everyone")));
         System.out.println((deleteSpaces("")));
 
+        line();
+        task();
+
+        System.out.println(RemoveAllaAlgorithm("QA4Everyone"));
+        System.out.println(RemoveAllaAlgorithm("panda"));
+        System.out.println("");
     }
 }
