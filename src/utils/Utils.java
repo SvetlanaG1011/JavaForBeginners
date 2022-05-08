@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Utils {
 
-    public static int num = 6;
+    public static int num = 1;
     public static String expectedResultDouble = " ";
     public static String actualResultDouble = " ";
 
