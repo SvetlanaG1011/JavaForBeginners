@@ -85,6 +85,18 @@ public class HW10 {
         }
     }
 
+    public static String methodConcatAddQuotesAndPoint(String str) {
+
+        if (str.length() != 0) {
+            String noSpaces = str.trim();
+            String result = "\"".concat(noSpaces).concat(".\"");
+
+            return result;
+        }
+
+        return "String is empty";
+    }
+
     public static void main(String[] args) {
 
         line();
@@ -144,6 +156,12 @@ public class HW10 {
                 "And by a part of all thy glory live.\n" +
                 "Look what is best, that best I wish in thee. This wish I have; then ten times happy me."));
 
+        line();
+        task();
+
+        System.out.println(methodConcatAddQuotesAndPoint("One"));
+        System.out.println(methodConcatAddQuotesAndPoint("    TWO  "));
+        System.out.println(methodConcatAddQuotesAndPoint(""));
 
     }
 }
