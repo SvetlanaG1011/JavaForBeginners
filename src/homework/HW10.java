@@ -85,7 +85,7 @@ public class HW10 {
         }
     }
 
-    public static String methodConcatAddQuotesAndPoint(String str) {
+    public static String methodConcatQuotesAndPointRemoveSpaces(String str) {
 
         if (str.length() != 0) {
             String noSpaces = str.trim();
@@ -159,9 +159,9 @@ public class HW10 {
         line();
         task();
 
-        System.out.println(methodConcatAddQuotesAndPoint("One"));
-        System.out.println(methodConcatAddQuotesAndPoint("    TWO  "));
-        System.out.println(methodConcatAddQuotesAndPoint(""));
+        System.out.println(methodConcatQuotesAndPointRemoveSpaces("One"));
+        System.out.println(methodConcatQuotesAndPointRemoveSpaces("    TWO  "));
+        System.out.println(methodConcatQuotesAndPointRemoveSpaces(""));
 
     }
 }
