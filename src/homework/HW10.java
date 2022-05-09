@@ -1,5 +1,6 @@
 package homework;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 import static utils.Utils.*;
@@ -24,20 +25,20 @@ public class HW10 {
         return "String is empty";
     }
 
-    public static String RemoveAllaAlgorithm(String str){
+    public static String RemoveAllaAlgorithm(String str) {
 
-        if (str.length() != 0 ){
-           str = str.replace("a", "");
+        if (str.length() != 0) {
+            str = str.replace("a", "");
 
-          return str;
+            return str;
         }
 
         return " ";
     }
 
-    public static String RemoveAllZeros(String str){
+    public static String RemoveAllZeros(String str) {
 
-        if (str.length() != 0){
+        if (str.length() != 0) {
             str = str.replace(" ", "");
 
             return str.replace("0", "");
@@ -46,15 +47,31 @@ public class HW10 {
         return " ";
     }
 
-    public  static String removeAllSpaces(String str){
+    public static String removeAllSpaces(String str) {
 
-        if (str.length() != 0){
+        if (str.length() != 0) {
             str = str.replace(" ", "");
 
             return str;
         }
 
         return " ";
+    }
+
+    public static int aAndACounter(String str) {
+        if (str.length() != 0 && str.toLowerCase().contains("a")) {
+
+            int count = 0;
+            for (int i = 0; i < str.length(); i++) {
+                if (str.toLowerCase().charAt(i) == 'a') {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        return 0;
     }
 
     public static void main(String[] args) {
@@ -84,6 +101,13 @@ public class HW10 {
 
         System.out.println(removeAllSpaces("  QA  4 Everyone  "));
         System.out.println(removeAllSpaces("pa   n d a  "));
+
+        line();
+        task();
+
+        String str13 = "Abracadabra";
+        System.out.println(aAndACounter(str13));
+        System.out.println(aAndACounter("Homenum Revelio"));
 
     }
 }
