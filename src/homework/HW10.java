@@ -35,6 +35,28 @@ public class HW10 {
         return " ";
     }
 
+    public static String RemoveAllZeros(String str){
+
+        if (str.length() != 0){
+            str = str.replace(" ", "");
+
+            return str.replace("0", "");
+        }
+
+        return " ";
+    }
+
+    public  static String removeAllSpaces(String str){
+
+        if (str.length() != 0){
+            str = str.replace(" ", "");
+
+            return str;
+        }
+
+        return " ";
+    }
+
     public static void main(String[] args) {
 
         line();
@@ -50,5 +72,18 @@ public class HW10 {
         System.out.println(RemoveAllaAlgorithm("QA4Everyone"));
         System.out.println(RemoveAllaAlgorithm("panda"));
         System.out.println("");
+
+        line();
+        task();
+
+        System.out.println(RemoveAllZeros("  3 5 0 4 2 0 9 7 0 6 0 4 0    0 0 0"));
+        System.out.println(RemoveAllZeros(" 0000000111"));
+
+        line();
+        task();
+
+        System.out.println(removeAllSpaces("  QA  4 Everyone  "));
+        System.out.println(removeAllSpaces("pa   n d a  "));
+
     }
 }
