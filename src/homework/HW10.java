@@ -2,6 +2,7 @@ package homework;
 
 import java.sql.SQLOutput;
 import java.util.Arrays;
+import java.util.Locale;
 
 import static utils.Utils.*;
 
@@ -97,6 +98,44 @@ public class HW10 {
         return "String is empty";
     }
 
+    public static String nameOfTheCity(String str) {
+
+        if (str.length() != 0) {
+            String noSpacesStr = str.trim();
+
+            return noSpacesStr.substring(0, 1).toUpperCase() + noSpacesStr.substring(1).toLowerCase();
+        }
+
+        return "String is empty";
+    }
+
+    public static String methodIndexOf9(String str, String parameter){
+
+        String newStr = str.toLowerCase();
+        if (str.length() != 0 && parameter.isEmpty() == false){
+            String result = newStr.substring(str.indexOf(parameter),  newStr.lastIndexOf(parameter) + 1);
+
+            return result;
+        }
+
+        return "";
+    }
+
+    public static boolean wordsStartsAndEndsWithTheSameLetter(String str) {
+
+        String result = str.toLowerCase();
+        String firstLetter = result.substring(0, 1);
+        String lastLetter = result.substring(str.length() - 1, (str.length()));
+
+        if (str.length() != 0 && firstLetter.equals(lastLetter)) {
+
+            return true;
+        } else {
+
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
 
         line();
@@ -162,6 +201,25 @@ public class HW10 {
         System.out.println(methodConcatQuotesAndPointRemoveSpaces("One"));
         System.out.println(methodConcatQuotesAndPointRemoveSpaces("    TWO  "));
         System.out.println(methodConcatQuotesAndPointRemoveSpaces(""));
+
+        line();
+        task();
+
+        System.out.println(nameOfTheCity("tashkent"));
+        System.out.println(nameOfTheCity("ChicaGO"));
+        System.out.println(nameOfTheCity(" tashkENt "));
+
+        line();
+        task();
+
+        System.out.println(methodIndexOf9("Abracadabra", "b"));
+        System.out.println(methodIndexOf9("Whippersnapper", "p"));
+
+        line();
+        task();
+
+        System.out.println(wordsStartsAndEndsWithTheSameLetter("Abracadabra"));
+        System.out.println(wordsStartsAndEndsWithTheSameLetter("Whippersnapper"));
 
     }
 }
